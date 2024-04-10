@@ -25,7 +25,7 @@ def generate(text):
 
 @app.get("/")
 def read_root():
-    return {"Hello": "there"}
+  return {"Hello": "there"}
 
 @app.post("/suggestion")
 def create_suggestion(echo_text: Echo):
