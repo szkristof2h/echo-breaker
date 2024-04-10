@@ -24,8 +24,8 @@ def generate(text):
     return "No suggestions"
 
 @app.get("/")
-def read_root():
-  return {"Hello": "there"}
+async def root():
+  return {"greeting": "Hello, World!", "message": "Welcome to FastAPI!"}
 
 @app.post("/suggestion")
 def create_suggestion(echo_text: Echo):
